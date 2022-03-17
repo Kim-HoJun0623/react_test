@@ -19,6 +19,7 @@ function App() {
       email: faker.internet.email(),
       jobTitle: faker.name.jobTitle(),
       phoneNo: faker.phone.phoneNumber(),
+      image: faker.image.avatar()
       
     }
   )
@@ -26,27 +27,27 @@ function App() {
 
    const userCards = userDatas.map((userData, idx) => {
     return <Card sx={{ maxWidth: 345 }}>
-      <div key={idx}>
+    
     <CardActionArea>
     
       <CardMedia
         component="img"
         height="240"
-        image= {faker.image.avatar()}
+        image= {userData.image}
         alt="green iguana"
       />
     
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {userData.name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
+        <h4>{ userData.jobTitle }</h4>
+        { userData.email }<br />
+        <br />
+         { userData.phoneNo }
       </CardContent>
     </CardActionArea>
-    </div>
+  
   </Card>
     
     
