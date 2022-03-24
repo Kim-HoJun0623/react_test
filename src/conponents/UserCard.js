@@ -18,7 +18,7 @@ function UserCard(props) {
     <CardMedia
       component="img"
       height="240"
-      image= {userData.image}
+      image= {userData.avatar}
       alt="green iguana"
     />
   
